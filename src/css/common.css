@@ -35,6 +35,9 @@ img {
   overflow: hidden;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   cursor: pointer;
+  font-weight: 600;
+
+  letter-spacing: 2px;
 }
 
 .btn-color-switcher::before {
