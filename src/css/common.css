@@ -116,3 +116,21 @@ img {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+#datetime-picker {
+  border: none;
+  border: 1px solid orange;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+  outline: none;
+  background-color: rgba(253, 235, 212, 0.535);
+  font-weight: 600;
+}
+
+.timer {
+  display: flex;
+  gap: 5rem;
+  font-weight: 600;
+  font-size: 25px;
+  margin-top: 3rem;
+}
