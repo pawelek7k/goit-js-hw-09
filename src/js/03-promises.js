@@ -21,7 +21,7 @@ form.addEventListener('submit', event => {
 
   const firstDelayValue = form.elements.delay.value;
   const delayStepValue = form.elements.step.value;
-  const amountValue = form.elements.delay.value;
+  const amountValue = form.elements.amount.value;
 
   if (firstDelayValue < 0 || delayStepValue < 0 || amountValue < 0) {
     alert('Please enter positive values for all fields.');
@@ -29,7 +29,7 @@ form.addEventListener('submit', event => {
     for (let i = 0; i < amountValue; i++) {
       const position = i + 1;
 
-      createPromise(2, 1500)
+      createPromise(position, firstDelayValue + delayStepValue * i)
         .then(({ position, delay }) => {
           Notiflix.Notify.success(
             `Fulfilled promise ${position} in ${delay}ms`
