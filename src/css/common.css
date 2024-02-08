@@ -127,10 +127,75 @@ img {
   font-weight: 600;
 }
 
+#datetime-picker:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
 .timer {
   display: flex;
   gap: 5rem;
   font-weight: 600;
   font-size: 25px;
   margin-top: 3rem;
+}
+
+/* 03-hw */
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  14% {
+    color: #ff8000;
+  }
+  28% {
+    color: #ffff00;
+  }
+  42% {
+    color: #80ff00;
+  }
+  57% {
+    color: #00ff00;
+  }
+  71% {
+    color: #00ff80;
+  }
+  85% {
+    color: #00ffff;
+  }
+  100% {
+    color: #0080ff;
+  }
+}
+
+.btn-promises {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 16px;
+  border: none;
+  background-color: black;
+  border-radius: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  animation: rainbow 5s infinite;
+}
+
+.form input {
+  outline: none;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.form {
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-promises:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }

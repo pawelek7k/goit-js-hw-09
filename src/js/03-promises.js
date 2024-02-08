@@ -23,15 +23,23 @@ form.addEventListener('submit', event => {
   const delayStepValue = form.elements.step.value;
   const amountValue = form.elements.delay.value;
 
-  for (let i = 0; i < amountValue; i++) {
-    const position = i + 1;
+  if (firstDelayValue < 0 || delayStepValue < 0 || amountValue < 0) {
+    alert('Please enter positive values for all fields.');
+  } else {
+    for (let i = 0; i < amountValue; i++) {
+      const position = i + 1;
 
-    createPromise(2, 1500)
-      .then(({ position, delay }) => {
-        Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
-      })
-      .catch(({ position, delay }) => {
-        Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
-      });
+      createPromise(2, 1500)
+        .then(({ position, delay }) => {
+          Notiflix.Notify.success(
+            `Fulfilled promise ${position} in ${delay}ms`
+          );
+        })
+        .catch(({ position, delay }) => {
+          Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
+        });
+    }
   }
+
+  form.reset();
 });
