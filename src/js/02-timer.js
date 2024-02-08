@@ -3,6 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
 const startBtn = document.querySelector('[data-start]');
+startBtn.disabled = true;
 
 const options = {
   enableTime: true,
