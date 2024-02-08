@@ -9,6 +9,7 @@ let colorChanger;
 
 startBtn.addEventListener('click', () => {
   startBtn.disabled = true;
+  stopBtn.disabled = false;
   colorChanger = setInterval(() => {
     const color = getRandomHexColor();
     document.body.style.backgroundColor = color;
@@ -19,4 +20,5 @@ stopBtn.addEventListener('click', () => {
   startBtn.disabled = false;
   clearInterval(colorChanger);
   document.body.style.backgroundColor = '';
+  stopBtn.disabled = true;
 });

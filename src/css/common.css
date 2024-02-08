@@ -77,6 +77,11 @@ img {
   margin-top: 200px;
 }
 
+.btn-color-switcher:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* 02-timer */
 
 .container-timer {
