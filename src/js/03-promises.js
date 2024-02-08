@@ -19,9 +19,9 @@ function createPromise(position, delay) {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const firstDelayValue = form.elements.delay.value;
-  const delayStepValue = form.elements.step.value;
-  const amountValue = form.elements.amount.value;
+  const firstDelayValue = parseInt(form.elements.delay.value);
+  const delayStepValue = parseInt(form.elements.step.value);
+  const amountValue = parseInt(form.elements.amount.value);
 
   if (firstDelayValue < 0 || delayStepValue < 0 || amountValue < 0) {
     alert('Please enter positive values for all fields.');
