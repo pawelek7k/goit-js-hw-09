@@ -29,6 +29,9 @@ startBtn.addEventListener('click', () => {
   const selectedDate = new Date(
     document.querySelector('#datetime-picker').value
   );
+  startBtn.disabled = true;
+  const inputHtml = document.querySelector('#datetime-picker');
+  inputHtml.disabled = true;
   const currentTime = new Date();
   let timeDiffrence = selectedDate.getTime() - currentTime.getTime();
 

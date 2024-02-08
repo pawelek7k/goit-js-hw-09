@@ -111,3 +111,8 @@ img {
 .btn-timer:hover {
   background: linear-gradient(to right, #ff6666, #ffcc00);
 }
+
+.btn-timer:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
